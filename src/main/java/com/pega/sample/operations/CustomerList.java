@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
+import com.pega.sample.exception.SampleException;
 import com.pega.sample.users.Customer;
 
 public class CustomerList {
@@ -30,12 +31,12 @@ public class CustomerList {
 		}
 	}
 
-	public Customer getCustomer(String id) {
+	public Customer getCustomer(String id) throws SampleException{
 		Optional<Customer> customerInfo = customers.stream().filter(customer -> customer.getId().equals(id)).findFirst();
 		if(customerInfo.isPresent()) {
 			return customerInfo.get();
 		} else {
-			throw 
+			throw new SampleException("Customer does not exist");
 		}
 	}
 	
