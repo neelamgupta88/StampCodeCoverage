@@ -12,6 +12,7 @@ public class CustomerList {
 	
 	private List<Customer> customers;
 	
+	
 	public CustomerList() {
 		customers = new ArrayList<>();
 	}
@@ -38,6 +39,16 @@ public class CustomerList {
 		} else {
 			throw new SampleException("Customer does not exist");
 		}
+	}
+	
+	public void updateCustomer(String id, Customer updatedCustomer) {
+		try {
+				Customer customer = getCustomer(id);
+		}catch(SampleException e) {
+			System.out.println("Customer does not exist. Creating a new record.");
+			addCustomer(updatedCustomer);
+		}
+		
 	}
 	
 }
