@@ -1,5 +1,24 @@
 package com.pega.sample.test;
 
+import org.junit.Before;
+import org.junit.Test;
+
+import com.pega.sample.operations.CustomerList;
+import com.pega.sample.users.Customer;
+
 public class CustomerListTest {
+	
+	private CustomerList customers;
+	
+	@Before
+	public void setUp() {
+		customers = new CustomerList();
+	}
+	
+	@Test
+	public void addCustomerTest() {
+		Customer customer = new Customer("Neelam", "India");
+		customers.addCustomer(customer);
+	}
 
 }

@@ -2,26 +2,31 @@ package com.pega.sample.users;
 
 public class Customer {
 
-	private String Name;
+	private String name;
 
 	private String id;
 
-	private String Address;
+	private String address;
+	
+	public Customer(String name, String country) {
+		this.name = name;
+		this.address = country;
+	}
 
 	public String getName() {
-		return Name;
+		return name;
 	}
 
 	public void setName(String name) {
-		Name = name;
+		this.name = name;
 	}
 
 	public String getAddress() {
-		return Address;
+		return address;
 	}
 
 	public void setAddress(String address) {
-		Address = address;
+		this.address = address;
 	}
 
 	public String getId() {
