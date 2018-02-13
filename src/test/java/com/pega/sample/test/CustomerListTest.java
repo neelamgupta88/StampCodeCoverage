@@ -22,5 +22,11 @@ public class CustomerListTest {
 		
 		Assert.assertTrue(customers.addCustomer(customer));
 	}
+	
+	@Test
+	public void getCustomerTest() throws Exception {
+		addCustomerTest();
+		Assert.assertNotNull(customers.getCustomerByName("Neelam"));
+	}
 
 }

@@ -41,6 +41,15 @@ public class CustomerList {
 		}
 	}
 	
+	public Customer getCustomerByName(String name) throws SampleException {
+		Optional<Customer> customerInfo = customers.stream().filter(customer -> customer.getName().equals(name)).findFirst();
+		if(customerInfo.isPresent()) {
+			return customerInfo.get();
+		} else {
+			throw new SampleException("Customer does not exist");
+		}
+	}
+	
 	public void updateCustomer(String id, Customer updatedCustomer) {
 		try {
 				Customer customer = getCustomer(id);
