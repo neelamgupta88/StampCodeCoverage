@@ -1,5 +1,6 @@
 package com.pega.sample.test;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -18,7 +19,8 @@ public class CustomerListTest {
 	@Test
 	public void addCustomerTest() {
 		Customer customer = new Customer("Neelam", "India");
-		customers.addCustomer(customer);
+		
+		Assert.assertTrue(customers.addCustomer(customer));
 	}
 
 }

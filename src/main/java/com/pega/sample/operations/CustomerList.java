@@ -17,9 +17,9 @@ public class CustomerList {
 		customers = new ArrayList<>();
 	}
 	
-	public void addCustomer(Customer customer) {
+	public boolean addCustomer(Customer customer) {
 		customer.setId(UUID.randomUUID().toString());
-		customers.add(customer);
+		return customers.add(customer);
 	}
 	
 	public boolean deleteCustomer(String id) {
