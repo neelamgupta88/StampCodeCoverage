@@ -28,5 +28,11 @@ public class CustomerListTest {
 		addCustomerTest();
 		Assert.assertNotNull(customers.getCustomerByName("Neelam"));
 	}
+	
+	@Test
+	public void deleteCustomerTest() throws Exception {
+		addCustomerTest();
+		Assert.assertTrue(customers.deleteCustomer(customers.getCustomerByName("Neelam").getId()));
+	}
 
 }
