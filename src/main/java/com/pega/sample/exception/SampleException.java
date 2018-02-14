@@ -1,5 +1,7 @@
 package com.pega.sample.exception;
-
+/**
+Exception class
+*/
 public class SampleException extends Exception {
 	
 	public SampleException(String message, Throwable cause) {
