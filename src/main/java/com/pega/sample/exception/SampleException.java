@@ -1,6 +1,6 @@
 package com.pega.sample.exception;
 /**
-Exception class
+Exception class to log exception
 */
 public class SampleException extends Exception {
 	
